@@ -1,2 +1,2 @@
-# privacy-notice
-SUCSS Privacy Statement (SUSU template converted to LaTeX)
+# SRO Privacy Notice
+SRO Privacy Notice (SUSU template converted to LaTeX)
