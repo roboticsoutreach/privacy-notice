@@ -13,6 +13,9 @@ jobs:
     container: theorangeone/docker-pandoc
 
     steps:
+    - name: Checkout
+      uses: actions/checkout@v4.1.1
+
     - name: Build document
       run: make
 
