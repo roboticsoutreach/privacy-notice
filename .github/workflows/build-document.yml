@@ -1,0 +1,26 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    container: theorangeone/docker-pandoc
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4.1.1
+
+    - name: Build document
+      run: make
+
+    - name: Store built PDF
+      uses: actions/upload-artifact@v3.1.3
+      with:
+        name: privacy.pdf
+        path: privacy.pdf
